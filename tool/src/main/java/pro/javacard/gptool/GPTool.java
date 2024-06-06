@@ -69,12 +69,6 @@ public final class GPTool extends GPCommandLineInterface implements SimpleSmartC
     static final String ENV_GP_PCSC_RESET = "GP_PCSC_RESET";
 
     static void setupLogging(OptionSet args) {
-        // Set up slf4j simple in a way that pleases us
-        System.setProperty("org.slf4j.simpleLogger.showThreadName", "false");
-        System.setProperty("org.slf4j.simpleLogger.levelInBrackets", "true");
-        System.setProperty("org.slf4j.simpleLogger.showShortLogName", "true");
-        System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "warn");
-
         if (args.has(OPT_VERBOSE)) {
             isVerbose = true;
             System.setProperty("org.slf4j.simpleLogger.defaultLogLevel", "info");
